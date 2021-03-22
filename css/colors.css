@@ -1,0 +1,10 @@
+:root {
+    --light-grey: rgb(83,83,83);
+    --dark-grey: rgb(33,33,33);
+    --light-green: rgb(183, 255, 170);
+    --green: rgb(29,185,84);
+    --black: rgb(18,18,18);
+    --white: rgb(241, 241, 241);
+    --light-red: rgb(255, 160, 160);
+    --red: rgb(255, 0, 0);
+}

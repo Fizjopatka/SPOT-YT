@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/colors.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>SpotYT - transfer your favorite playlists</title>
+    </head>
+    <body onload="onPageLoad()">
+        <main>
+            <nav class="navbar border-nav"></nav>
+            <nav class="navbar nav">
+                <div class="d-flex row justify-content-flex-start logo-container col-9 col-md-6 ml-sm-5">
+                    <div class="p big-p"><div class="spot float-left">Spot</div><div class="float-left red-p"><p>YT</p></div></div>
+                    <div class="w-100"></div>
+                    <div class="p small-p ">[ transfer playlists from Youtube to Spotify ]</div>
+                </div>
+                <div class="nav-box d-none d-md-flex row mr-5">
+                    <div class="nav-item mr-5">About</div>
+                    <div class="nav-item ml-5">Contact</div>
+                </div>
+                <div class="col-2 justify-content-flex-end d-md-none d-flex">
+                    <div class="burger-menu row mr-sm-1" id="burger-menu">
+                        <div class="line "></div>
+                        <div class="w-100"></div>
+                        <div class="line"></div>
+                        <div class="w-100"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </nav>
+            <nav>
+                <div class="burger-container">
+                    <div class="burger" id="burger">
+                        <div class="nav-item burger-item">About</div>
+                        <div class="nav-item burger-item">Contact</div>
+                    </div>
+                </div>
+            </nav>
+            <div class="spotify-login-container flex-container">
+                <div class="spotify-login-box d-flex row">
+                    <div class="first-step">first step to start</div>
+                    <div class="w-100"></div> 
+                    <input class="send-button btn btn-lg" type="button" onclick="requestAuthorization()" value="Login into Spotify"> <br>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex col justify-content-center">
+                    <div class="transfer-logo row d-flex justify-content-center">
+                        <div class="transfer-header">transfer your favorite playlists</div>
+                        <div class="w-100"></div>
+                        <div class="transfer-description">[ using SpotYT you can transfer any public YouTube music playlist to your Spotify account - for free ]</div>
+                        <div class="w-100"> </div> 
+                        <div class="logo-box row">
+                            <img src="img/youtube.png" alt="youtube logo">
+                            <div class="w-100"></div>
+                            <p>playlist</p>
+                        </div>
+                        <div class="arrow-box">
+                            <img src="img/right-arrow.png" alt="arrow">
+                        </div>
+                        <div class="logo-box row">
+                            <img src="img/spotify.png" alt="spotify logo">
+                            <div class="w-100"></div>
+                            <p>playlist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container row d-flex w-100 h-100">
+                    <div class="small-logo justify-content-flex-start col-5 row"> <div class="w-100">SpotYT 2021</div> <div class="w-100 small-text">[ created by Patrycja Hańdziuk & Jakub Rdzanek ]</div></div>
+                    <div class="footer-item col-1"></div>
+                    <div class="footer-item col-2">GITHUB</div>
+                    <div class="footer-item col-2">ABOUT</div>
+                    <div class="footer-item col-2">CONTACT</div>
+                    <div class="social-item col-3"></div><div class="col-3"></div>
+                    <div class="footer-description col-2">SpotYT on Github</div>
+                    <div class="footer-description col-2">About application</div>
+                    <div class="footer-description col-2">Email</div>
+                    <div class="w-100"></div>
+                    <div class="social-item col-3"></div><div class="col-3"></div>
+                    <div class="footer-description col-2">Jakub's Github</div>
+                    <div class="footer-description col-2">About us</div>
+                    <div class="w-100"></div>
+                    <div class="social-item col-3"><div class="ml-1 mr-1"><img src="img/facebook.png"></div><div class="ml-2 mr-2" ><img src="img/instagram.png"></div><div class="ml-1 mr-1" ><img src="img/twitter.png"></div></div><div class="col-3"></div>
+                    <div class="footer-description col-2">Patrycja's Github</div>
+                    <div class="w-100"></div>
+                    <div class="d-flex col-12 justify-content-center credits"><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></div>
+                </div>
+            </footer>
+        </main>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="script/main.js"></script>
+    </body>
+</html>
